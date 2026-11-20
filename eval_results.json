@@ -1,0 +1,222 @@
+{
+  "model": "Qwen/Qwen3.5-9B",
+  "belebele_n": 900,
+  "flores_n": 150,
+  "belebele": {
+    "eng_Latn": {
+      "language": "English",
+      "n": 900,
+      "correct": 853,
+      "accuracy": 94.78,
+      "se": 0.74,
+      "avg_prompt_tokens": 207.3,
+      "elapsed_s": 36.7
+    },
+    "fra_Latn": {
+      "language": "French",
+      "n": 900,
+      "correct": 832,
+      "accuracy": 92.44,
+      "se": 0.88,
+      "avg_prompt_tokens": 260.8,
+      "elapsed_s": 44.1
+    },
+    "amh_Ethi": {
+      "language": "Amharic",
+      "n": 900,
+      "correct": 613,
+      "accuracy": 68.11,
+      "se": 1.55,
+      "avg_prompt_tokens": 669.6,
+      "elapsed_s": 112.5
+    }
+  },
+  "flores_plus": {
+    "token_stats": {
+      "amh_Ethi": {
+        "language": "Amharic",
+        "n": 150,
+        "avg_tokens": 119.75,
+        "avg_chars": 86.97,
+        "avg_utf8_bytes": 223.37,
+        "tokens_per_char": 1.377
+      },
+      "cym_Latn": {
+        "language": "Welsh",
+        "n": 150,
+        "avg_tokens": 56.17,
+        "avg_chars": 140.29,
+        "avg_utf8_bytes": 140.81,
+        "tokens_per_char": 0.4
+      },
+      "eng_Latn": {
+        "language": "English",
+        "n": 150,
+        "avg_tokens": 28.01,
+        "avg_chars": 133.17,
+        "avg_utf8_bytes": 133.28,
+        "tokens_per_char": 0.21
+      },
+      "fra_Latn": {
+        "language": "French",
+        "n": 150,
+        "avg_tokens": 39.01,
+        "avg_chars": 157.57,
+        "avg_utf8_bytes": 164.74,
+        "tokens_per_char": 0.248
+      }
+    },
+    "translations": {
+      "eng_Latn->cym_Latn": {
+        "src": "English",
+        "tgt": "Welsh",
+        "n": 150,
+        "chrf++": 51.11,
+        "bleu": 25.47,
+        "elapsed_s": 39.7,
+        "samples": [
+          {
+            "src": "\"We now have 4-month-old mice that are non-diabetic that used to be diabetic,\" he added.",
+            "ref": "\"Mae gennym ni nawr lygod pedwar mis oed sydd ddim yn ddiabetig oedd yn arfer bod yn ddiabetig\", ychwanegodd e.",
+            "hyp": "\"Yn awr mae gennym fws 4 mis oed sydd ddim yn ddibwysig oedd yn ddibwysig,\" ychwanegodd efo."
+          },
+          {
+            "src": "Dr. Ehud Ur, professor of medicine at Dalhousie University in Halifax, Nova Scotia and chair of the clinical and scientific division of the Canadian Diabetes Association cautioned that the research is still in its early days.",
+            "ref": "Fe wnaeth Dr Ehud Ur, athro meddygaeth ym Mhrifysgol Dalhousie yn Halifax, Nova Scotia, a chadeirydd adran glinigol Cymdeithas Clefyd Siwgr Canada rybuddio bod yr ymchwil yn dal yn ei ddyddiau cynnar.",
+            "hyp": "Rhybuddodd y Dr Ehud Ur, athro meddygaeth yn Brifysgol Dalhousie yn Halifax, Nova Scotia, a phennaeth y rhaniad clinigol a gwyddonol Cymdeithas Diabet Canada, fod y ymchwil yn dal yn ei dyddiau cynnar."
+          },
+          {
+            "src": "Like some other experts, he is skeptical about whether diabetes can be cured, noting that these findings have no relevance to people who already have Type 1 diabetes.",
+            "ref": "Fel rhai arbenigwyr eraill, mae e'n amheus a ellir gwella diabetes, gan nodi nad oes gan y canfyddiadau hyn unrhyw berthnasedd i bobl sydd â diabetes Math 1 yn barod.",
+            "hyp": "Fel rhai arall o'r gwybodaeth, mae'n ddifrifol am y cwestiwn a all ganser gael ei drin, gan nodi nad oes unrhyw berthynas i'r canfyddiadau hyn i bobl sydd eisoes â chanser math 1."
+          }
+        ]
+      },
+      "cym_Latn->eng_Latn": {
+        "src": "Welsh",
+        "tgt": "English",
+        "n": 150,
+        "chrf++": 71.43,
+        "bleu": 51.07,
+        "elapsed_s": 21.1,
+        "samples": [
+          {
+            "src": "\"Mae gennym ni nawr lygod pedwar mis oed sydd ddim yn ddiabetig oedd yn arfer bod yn ddiabetig\", ychwanegodd e.",
+            "ref": "\"We now have 4-month-old mice that are non-diabetic that used to be diabetic,\" he added.",
+            "hyp": "\"We now have four-month-old mice that are not diabetic, which used to be diabetic,\" he added."
+          },
+          {
+            "src": "Fe wnaeth Dr Ehud Ur, athro meddygaeth ym Mhrifysgol Dalhousie yn Halifax, Nova Scotia, a chadeirydd adran glinigol Cymdeithas Clefyd Siwgr Canada rybuddio bod yr ymchwil yn dal yn ei ddyddiau cynnar.",
+            "ref": "Dr. Ehud Ur, professor of medicine at Dalhousie University in Halifax, Nova Scotia and chair of the clinical and scientific division of the Canadian Diabetes Association cautioned that the research is still in its early days.",
+            "hyp": "Dr Ehud Ur, professor of medicine at Dalhousie University in Halifax, Nova Scotia, and chair of the clinical division of the Canadian Diabetes Association, warned that the research was still in its early days."
+          },
+          {
+            "src": "Fel rhai arbenigwyr eraill, mae e'n amheus a ellir gwella diabetes, gan nodi nad oes gan y canfyddiadau hyn unrhyw berthnasedd i bobl sydd â diabetes Math 1 yn barod.",
+            "ref": "Like some other experts, he is skeptical about whether diabetes can be cured, noting that these findings have no relevance to people who already have Type 1 diabetes.",
+            "hyp": "Like other experts, he is doubtful that diabetes can be improved, noting that these findings have no relevance to people who already have Type 1 diabetes."
+          }
+        ]
+      },
+      "eng_Latn->amh_Ethi": {
+        "src": "English",
+        "tgt": "Amharic",
+        "n": 150,
+        "chrf++": 18.36,
+        "bleu": 2.49,
+        "elapsed_s": 52.8,
+        "samples": [
+          {
+            "src": "\"We now have 4-month-old mice that are non-diabetic that used to be diabetic,\" he added.",
+            "ref": "\"አሁን የስኳር በሽተኛ ያልነበሩ አሁን ግን የሆኑ የ4-ወር-ዕድሜ ያላቸው አይጦች አሉን፣ አለ። \"",
+            "hyp": "\"አሁን 4 ወር ያሉ ማዕከላዊ ማዕከላዊ ማዕከላዊ ማዕከላዊ ማዕከላዊ ማዕከላዊ ማዕከላዊ ማዕከላዊ ማዕከላዊ ማዕከላዊ ማዕከላዊ ማዕከላዊ ማዕከላዊ ማ"
+          },
+          {
+            "src": "Dr. Ehud Ur, professor of medicine at Dalhousie University in Halifax, Nova Scotia and chair of the clinical and scientific division of the Canadian Diabetes Association cautioned that the research is still in its early days.",
+            "ref": "ዶክተር ኢሁድ ኡር፣ በሃሊፉሽ፣ ኖቫስኮሽያ ውስጥ በሚገኘው በዳልሃውዚ ዩኒቨርሲቲ የህክምና ፕሮፌሰር፣ እና የካናዳዊ የስኳር ህመ ማህበር የክሊኒካዊ እና ሳይንሳዊ ክፍል ሊቀመንበር ጥናቱ ገና በጅማሬ ወቅቱ እንደሆነ አስታውቋል።",
+            "hyp": "የዳሌሁስ ዩኒቨርሲቲ በሃሊፋክስ፣ ኖቫ ስኮሻ የሚገኝ የህክምና ተማሪ ሶስተኛ ምክር ቤት ምክር ቤት ምክር ቤት ምክር ቤት ምክር ቤት ምክር ቤት ምክር ቤት ምክር ቤት ምክር ቤት ምክር ቤ"
+          },
+          {
+            "src": "Like some other experts, he is skeptical about whether diabetes can be cured, noting that these findings have no relevance to people who already have Type 1 diabetes.",
+            "ref": "ልክ እንደ ሌሎች ባለሙያዎች፣ አይነት 1 የስኳር በሽታ ላለባቸው ሰዎች እነዚህ ግኝቶች ምንም ጥቅም እንደሌላቸው በመገንዘብ የስኳር በሽታ ሊፈወስ የሚችል መሆኑን ይጠራጠራል።",
+            "hyp": "እንደ ሌሎች ባለሙያዎች፣ በድያቤቲስ መጠገን እንደሚቻል ያሰቡትን ለመገመት ግምገማ አለው፤ እነዚህ ውጤቶች ለድያቤቲስ ዓይነት 1 ያላቸው ሰዎች ግን ግንኙነት የሌለው ነው ብሏል።"
+          }
+        ]
+      },
+      "amh_Ethi->eng_Latn": {
+        "src": "Amharic",
+        "tgt": "English",
+        "n": 150,
+        "chrf++": 49.74,
+        "bleu": 24.03,
+        "elapsed_s": 22.0,
+        "samples": [
+          {
+            "src": "\"አሁን የስኳር በሽተኛ ያልነበሩ አሁን ግን የሆኑ የ4-ወር-ዕድሜ ያላቸው አይጦች አሉን፣ አለ። \"",
+            "ref": "\"We now have 4-month-old mice that are non-diabetic that used to be diabetic,\" he added.",
+            "hyp": "We now have donkeys that were not diabetic before but are now diabetic, aged four months, he said."
+          },
+          {
+            "src": "ዶክተር ኢሁድ ኡር፣ በሃሊፉሽ፣ ኖቫስኮሽያ ውስጥ በሚገኘው በዳልሃውዚ ዩኒቨርሲቲ የህክምና ፕሮፌሰር፣ እና የካናዳዊ የስኳር ህመ ማህበር የክሊኒካዊ እና ሳይንሳዊ ክፍል ሊቀመንበር ጥናቱ ገና በጅማሬ ወቅቱ እንደሆነ አስታውቋል።",
+            "ref": "Dr. Ehud Ur, professor of medicine at Dalhousie University in Halifax, Nova Scotia and chair of the clinical and scientific division of the Canadian Diabetes Association cautioned that the research is still in its early days.",
+            "hyp": "Dr. Eshu Ur, Professor of Medicine at Dalhousie University in Halifax, Nova Scotia, and Chair of the Clinical and Scientific Section of the Canadian Diabetes Association, stated that the study was conducted during the summer period."
+          },
+          {
+            "src": "ልክ እንደ ሌሎች ባለሙያዎች፣ አይነት 1 የስኳር በሽታ ላለባቸው ሰዎች እነዚህ ግኝቶች ምንም ጥቅም እንደሌላቸው በመገንዘብ የስኳር በሽታ ሊፈወስ የሚችል መሆኑን ይጠራጠራል።",
+            "ref": "Like some other experts, he is skeptical about whether diabetes can be cured, noting that these findings have no relevance to people who already have Type 1 diabetes.",
+            "hyp": "Like other professionals, Type 1 diabetics doubt that these findings will be useful for them, and they hesitate to believe that diabetes can be predicted."
+          }
+        ]
+      },
+      "eng_Latn->fra_Latn": {
+        "src": "English",
+        "tgt": "French",
+        "n": 150,
+        "chrf++": 68.82,
+        "bleu": 48.8,
+        "elapsed_s": 26.2,
+        "samples": [
+          {
+            "src": "\"We now have 4-month-old mice that are non-diabetic that used to be diabetic,\" he added.",
+            "ref": "« Nous avons à présent des souris de 4 mois qui ne sont pas diabétiques alors qu'elles l'étaient auparavant », a-t-il ajouté.",
+            "hyp": "« Nous avons maintenant des souris âgées de 4 mois qui ne sont plus diabétiques, alors qu'elles l'étaient auparavant », a-t-il ajouté."
+          },
+          {
+            "src": "Dr. Ehud Ur, professor of medicine at Dalhousie University in Halifax, Nova Scotia and chair of the clinical and scientific division of the Canadian Diabetes Association cautioned that the research is still in its early days.",
+            "ref": "Le Dr Ehud Ur, professeur de médecine à l'Université Dalhousie de Halifax (Nouvelle-Écosse) et président de la division clinique et scientifique de l'Association canadienne du diabète, a averti que la recherche en était encore à ses débuts.",
+            "hyp": "Le Dr Ehud Ur, professeur de médecine à l'Université Dalhousie à Halifax, en Nouvelle-Écosse, et président de la division clinique et scientifique de l'Association canadienne du diabète, a fait remarquer que la recherche en est encore à ses débuts."
+          },
+          {
+            "src": "Like some other experts, he is skeptical about whether diabetes can be cured, noting that these findings have no relevance to people who already have Type 1 diabetes.",
+            "ref": "À l'instar d'autres experts, il se montre sceptique quant à la possibilité de guérir le diabète, faisant remarquer que ces résultats ne sont pas applicables aux personnes qui souffrent déjà de diabète de type 1.",
+            "hyp": "Comme certains autres experts, il est sceptique quant à la possibilité de guérir le diabète, notant que ces résultats ne concernent pas les personnes atteintes de diabète de type 1."
+          }
+        ]
+      },
+      "fra_Latn->eng_Latn": {
+        "src": "French",
+        "tgt": "English",
+        "n": 150,
+        "chrf++": 67.18,
+        "bleu": 42.79,
+        "elapsed_s": 20.2,
+        "samples": [
+          {
+            "src": "« Nous avons à présent des souris de 4 mois qui ne sont pas diabétiques alors qu'elles l'étaient auparavant », a-t-il ajouté.",
+            "ref": "\"We now have 4-month-old mice that are non-diabetic that used to be diabetic,\" he added.",
+            "hyp": "\"We now have 4-month-old mice that are no longer diabetic, whereas they were previously,\" he added."
+          },
+          {
+            "src": "Le Dr Ehud Ur, professeur de médecine à l'Université Dalhousie de Halifax (Nouvelle-Écosse) et président de la division clinique et scientifique de l'Association canadienne du diabète, a averti que la recherche en était encore à ses débuts.",
+            "ref": "Dr. Ehud Ur, professor of medicine at Dalhousie University in Halifax, Nova Scotia and chair of the clinical and scientific division of the Canadian Diabetes Association cautioned that the research is still in its early days.",
+            "hyp": "Dr. Ehud Ur, professor of medicine at Dalhousie University in Halifax (Nova Scotia) and president of the Clinical and Scientific Division of the Canadian Diabetes Association, warned that the research was still in its early stages."
+          },
+          {
+            "src": "À l'instar d'autres experts, il se montre sceptique quant à la possibilité de guérir le diabète, faisant remarquer que ces résultats ne sont pas applicables aux personnes qui souffrent déjà de diabète de type 1.",
+            "ref": "Like some other experts, he is skeptical about whether diabetes can be cured, noting that these findings have no relevance to people who already have Type 1 diabetes.",
+            "hyp": "Like other experts, he is skeptical about the possibility of curing diabetes, noting that these results are not applicable to people who already suffer from type 1 diabetes."
+          }
+        ]
+      }
+    }
+  }
+}
