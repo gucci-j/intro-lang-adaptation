@@ -2,10 +2,10 @@
 
 Reproducible scripts and results accompanying the **Introduction to Language Adaptation** lecture (COM3110/4115), evaluated with a single open-weights model (**Qwen3.5-9B**, zero-shot, `bfloat16`, non-thinking mode).
 
-The repository is organized by lecture section:
+The repository is organised by lecture section:
 
-1. **Section 1 (Background — Slide 9):** Cross-lingual task performance gap on **Belebele** (reading comprehension) and **FLORES+** (machine translation), plus tokenizer overfragmentation statistics.
-2. **Section 5 (Discussion & Future Directions):** Cultural defaults (BLEnD fireworks prompts, US vs. UK norms), everyday cultural knowledge in English vs. Amharic/Welsh, and safety-critical localization (emergency numbers).
+1. **Section 1 (Background — Slide 9):** Cross-lingual task performance gap on **Belebele** (reading comprehension) and **FLORES+** (machine translation), plus tokeniser overfragmentation statistics.
+2. **Section 5 (Discussion & Future Directions):** Cultural defaults (BLEnD fireworks prompts, US vs. UK norms), everyday cultural knowledge in English vs. Amharic/Welsh, and safety-critical localisation (emergency numbers).
 
 ---
 
@@ -31,7 +31,7 @@ source .venv/bin/activate
 
 ## Section 1: Cross-Lingual Performance Gap (Slide 9)
 
-Measures task performance and tokenizer overfragmentation across high- and low-resource languages on `Qwen/Qwen3.5-9B`:
+Measures task performance and tokeniser overfragmentation across high- and low-resource languages on `Qwen/Qwen3.5-9B`:
 - **Belebele** (`facebook/belebele`, `n = 900`): 4-way multiple-choice reading comprehension in English (`eng_Latn`), French (`fra_Latn`, reference), and Amharic (`amh_Ethi`), evaluated via next-token logits over `A`/`B`/`C`/`D` (`enable_thinking=False`).
 - **FLORES+** (`openlanguagedata/flores_plus`, `devtest`, `n = 150`): Greedy-decoded machine translation (`chrF++` with `word_order=2` and `BLEU`) between English and French, Welsh (`cym_Latn`), and Amharic (`amh_Ethi`), plus average token and UTF-8 byte counts per sentence.
 
@@ -85,7 +85,7 @@ Full outputs are saved in [`eval_results.json`](eval_results.json).
 
 ---
 
-## Section 5: Cultural Defaults & Safety-Critical Localization
+## Section 5: Cultural Defaults & Safety-Critical Localisation
 
 No gated dataset is required for these demos.
 
@@ -102,16 +102,16 @@ python demo_culture.py --model Qwen/Qwen3.5-9B --output culture_results.json
 ### Key Findings (`Qwen/Qwen3.5-9B`)
 
 - **BLEnD Fireworks Prompts ([`live_demo_results.json`](live_demo_results.json)):**
-  - *No country (EN):* Leads with **July 4th (US)** and omits UK Bonfire Night (5 Nov).
-  - *UK (EN):* Picks **New Year's Eve (Dec 31)** as the primary answer, mentioning Bonfire Night only as a secondary occasion.
-  - *Ethiopia (Amharic, BLEnD):* Fails to recognize `ርችት` (*fireworks*), transliterating it as *"Ritcht"* and claiming it is not a recognized term in Ethiopian law.
-  - *Ethiopia (EN):* Recovers **New Year's Day (*Enkutatash*)** (confirming BLEnD's finding that English outperforms local languages), but still assigns the Western date **January 1st** instead of September 11 (*Meskerem 1*).
+  - *No country (EN):* Leads with **July 4th (US)** and omits UK Bonfire Night (5 November).
+  - *UK (EN):* Picks **New Year's Eve (31 December)** as the primary answer, mentioning Bonfire Night only as a secondary occasion.
+  - *Ethiopia (Amharic, BLEnD):* Fails to recognise `ርችት` (*fireworks*), transliterating it as *"Ritcht"* and claiming it is not a recognised term in Ethiopian law.
+  - *Ethiopia (EN):* Recovers **New Year's Day (*Enkutatash*)** (confirming BLEnD's finding that English outperforms local languages), but still assigns the Western date **January 1st** instead of 11 September (*Meskerem 1*).
 - **Safety-Critical Emergency Number ([`live_demo_results.json`](live_demo_results.json)):**
   - *English:* Gives US **911**, UK **999 / 112**, Europe **112**, plus actionable CPR/AED steps.
   - *Amharic:* Misinterprets the breathing emergency as an emotional message and exhausts its 220-token budget (due to ~4× overfragmentation) before giving any emergency number — missing Ethiopia's **907** ambulance number.
 - **Broader Cultural Evaluation ([`culture_results.json`](culture_results.json)):**
-  - *US-default norms:* Defaults to May for Mother's Day (not UK March), January 1 for the tax year (not UK April 6), US meaning of *pants*, and 911 first.
-  - *Fluent language ≠ cultural knowledge:* Correctly answers Ethiopian calendar (*13 months, Pagumen*), Buna coffee ceremony rounds (*Abol, Tona, Baraka*), *Iddir* vs. *Equb*, *Dydd Santes Dwynwen* (25 Jan), *Mari Lwyd*, and *Calennig* in **English**, yet hallucinates basic facts when asked the exact same questions in **Amharic** or **Welsh**.
+  - *US-default norms:* Defaults to May for Mother's Day (not UK March), 1 January for the tax year (not UK 6 April), US meaning of *pants*, and 911 first.
+  - *Fluent language ≠ cultural knowledge:* Correctly answers Ethiopian calendar (*13 months, Pagumen*), Buna coffee ceremony rounds (*Abol, Tona, Baraka*), *Iddir* vs. *Equb*, *Dydd Santes Dwynwen* (25 January), *Mari Lwyd*, and *Calennig* in **English**, yet hallucinates basic facts when asked the exact same questions in **Amharic** or **Welsh**.
 
 ---
 
