@@ -128,3 +128,13 @@ python demo_culture.py --model Qwen/Qwen3.5-9B --output culture_results.json
 | `demo_culture.py` | Section 5 | US-default norms & Ethiopian/Welsh cultural knowledge demo |
 | `culture_results.json` | Section 5 | Saved outputs from `demo_culture.py` |
 | `install.sh`, `requirements.txt` | Setup | One-step environment setup and dependencies |
+
+---
+
+## Disclaimer
+
+The scripts in this repository were generated with **Gemini 4 Neon** for educational demonstration purposes and come with **no guarantee of correctness**. Please review and verify them before relying on them for research or production use.
+
+## Licence
+
+Released under the [MIT License](LICENSE).
