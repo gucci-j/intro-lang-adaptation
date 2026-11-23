@@ -1,0 +1,129 @@
+{
+  "model": "Qwen/Qwen3.5-9B",
+  "us_default_norms": [
+    {
+      "id": "mothers_day",
+      "topic": "Mother's Day date",
+      "prompt": "When is Mother's Day celebrated? Answer in one short sentence.",
+      "us_norm": "Second Sunday of May",
+      "uk_norm": "Mothering Sunday (fourth Sunday of Lent, in March)",
+      "response": "Mother's Day is celebrated on the second Sunday of May in the United States."
+    },
+    {
+      "id": "emergency_number",
+      "topic": "Emergency phone number",
+      "prompt": "What number should I dial in an emergency? Answer in one short sentence.",
+      "us_norm": "911",
+      "uk_norm": "999 (or 112)",
+      "response": "Dial 911 in the United States or 112 in most other countries."
+    },
+    {
+      "id": "tax_year",
+      "topic": "Tax year start",
+      "prompt": "When does the new tax year start? Answer in one short sentence.",
+      "us_norm": "January 1",
+      "uk_norm": "April 6",
+      "response": "The new tax year starts on January 1st."
+    },
+    {
+      "id": "pants_meaning",
+      "topic": "Everyday vocabulary ('pants')",
+      "prompt": "What piece of clothing does the word 'pants' refer to? Answer in one short sentence.",
+      "us_norm": "Trousers",
+      "uk_norm": "Underwear",
+      "response": "In American English, \"pants\" refers to a garment covering the lower body from the waist to the ankles."
+    },
+    {
+      "id": "first_floor",
+      "topic": "Building floor numbering",
+      "prompt": "If I walk into a building from the street, which floor am I on? Answer in one short sentence.",
+      "us_norm": "First floor",
+      "uk_norm": "Ground floor",
+      "response": "You are on the ground floor."
+    }
+  ],
+  "ethiopian_culture": [
+    {
+      "id": "ethiopian_months",
+      "topic": "Ethiopian calendar months",
+      "gold_fact": "13 months (12 months of 30 days + Pagume of 5 or 6 days).",
+      "en": "How many months are in the Ethiopian calendar, and what is the last month called? Answer briefly.",
+      "am": "በኢትዮጵያ የዘመን አቆጣጠር ስንት ወራት አሉ? የመጨረሻው ወርስ ምን ይባላል? በአጭሩ መልስ።",
+      "response_en": "The Ethiopian calendar has **13 months**. The last month is called **Pagumen** (or Pagum), which consists of 5 or 6 days.",
+      "response_am": "በኢትዮጵያ የዘመን አቆጣጠር **12 ወራት** አሉ። የመጨረሻው ወርስ **ጥር** ይባላል።",
+      "response_am_translated_en": "In Ethiopia's calendar, there are **12 months**. The last month is called **Tir**."
+    },
+    {
+      "id": "enkutatash",
+      "topic": "Enkutatash (Ethiopian New Year)",
+      "gold_fact": "Meskerem 1 (September 11, or September 12 in a leap year); children sing 'Abebayehosh' and give Adey Abeba flowers.",
+      "en": "What is Enkutatash, when is it celebrated, and what flower is traditionally associated with it? Answer briefly.",
+      "am": "እንቁጣጣሽ ምንድን ነው? መቼ ይከበራል? ከበዓሉ ጋር የሚያያዘው ባህላዊ አበባስ ምን ይባላል? በአጭሩ መልስ።",
+      "response_en": "**Enkutatash** is the Ethiopian and Eritrean New Year, marking the end of the rainy season and the beginning of spring. It is celebrated on **September 11** (or September 12 in leap years) according to the Gregorian calendar. The flower traditionally associated with the holiday is the **marigold** (*Lantana camara*), which is believed to bring good luck and is often worn or given as a gift.",
+      "response_am": "*   **እንቁጣጣሽ**፡ በኢትዮጵያ የሚገኝ የጥቁር ጥጥ (ከጥጥ ዝርያ) የሆነ ምግብ ነው።\n*   **መቼ ይከበራል**፡ በኢትዮጵያ ዘመናዊ ስዕል (ኦርቶዶክስ) በ**ጥቅምት 11** ቀን የሚከበር የሰማይ ልጅ (ሰውነት) ቀን ነው።\n*   **ባህላዊ አበባስ**፡ ከበዓሉ ጋር የሚ",
+      "response_am_translated_en": "*   **Inkutatash**: It is a food made from black fish (a type of fish) found in Ethiopia.\n*   **When is it celebrated**: It is celebrated on November 11 in modern Ethiopian (Orthodox) calendar as the day of the Son of Heaven (Body).\n*   **Cultural flowers**: Flowers associated with the festival..."
+    },
+    {
+      "id": "buna_rounds",
+      "topic": "Ethiopian coffee ceremony (Buna) rounds",
+      "gold_fact": "Three rounds: Abol (first), Tona (second), and Baraka (third).",
+      "en": "In a traditional Ethiopian coffee ceremony (Buna), what are the names of the three rounds of coffee? Answer briefly.",
+      "am": "በባህላዊው የኢትዮጵያ የቡና ሥነ ሥርዓት ውስጥ የሦስቱ የቡና ዙሮች ስም ምን ምን ናቸው? በአጭሩ መልስ።",
+      "response_en": "The three rounds of coffee in a traditional Ethiopian Buna ceremony are:\n\n1.  **Abol** (the first, strongest round)\n2.  **Tona** (the second, medium-strength round)\n3.  **Baraka** (the third, lightest round, often considered a blessing)",
+      "response_am": "በባህላዊው የኢትዮጵያ የቡና ሥነ ሥርዓት ውስጥ የሦስቱ የቡና ዙሮች ስሞች፡-\n\n1. **ቡና** (መጀመሪያው ዙር)\n2. **ቡና** (ሁለተኛው ዙር)\n3. **ቡና** (ሦስተኛው ዙር)\n\n*(ማስታወሻ፡ በሥነ ሥርዓቱ ውስጥ ሦስቱም ዙሮች \"ቡና\" ተብሎ ይጠራሉ፤ ነገር ግን በእያንዳንዱ ዙር የሚነ�",
+      "response_am_translated_en": "In the traditional Ethiopian coffee ceremony, the names of the three rounds of coffee are:\n\n1. **Buna** (first round)\n2. **Buna** (second round)\n3. **Buna** (third round)\n\n*(Note: In the ceremony, all three rounds are called \"Buna\"; however, in each round, the coffee is served...)*"
+    },
+    {
+      "id": "iddir_equb",
+      "topic": "Iddir and Equb (social institutions)",
+      "gold_fact": "Iddir is a community mutual-aid association mainly for funerals/bereavement; Equb is a rotating savings and credit association (ROSCA).",
+      "en": "What is the difference between Iddir and Equb in Ethiopian everyday life? Answer briefly.",
+      "am": "በኢትዮጵያ ማኅበረሰብ ውስጥ በዕድር እና በዕቁብ መካከል ያለው ልዩነት ምንድን ነው? በአጭሩ መልስ።",
+      "response_en": "In everyday Ethiopian life, **Iddir** and **Equb** are both traditional rotating savings and credit associations (ROSCAs), but they differ primarily in **purpose** and **structure**:\n\n*   **Iddir**: Primarily a **social welfare** organization focused on mutual aid during crises, such as funerals, weddings, or illness. Members contribute regularly to a fund used to support the affected member's family. It is often community-based and less rigid about the exact amount contributed.\n*   **Equb**: Primarily a **financial savings** tool where members contribute a fixed amount weekly or monthly to a rotating fund. One member receives the entire pot in each cycle to use for business, large purchases, or emergencies. It is more structured, often led by a treasurer, and emphasizes financial growth over immediate social support.\n\n**In short:** *Iddir",
+      "response_am": "በአጭሩ፡-\n\n*   **ዕቁብ (Aqub)** የሚለው ቃል ለ**ጥሩ ሰውነት**፣ ለጥሩ ጥንካሬ እና ለጥሩ የህይወት አጠቃቀም (Physical fitness) ይጠቅማል።\n*   **ዕድር (Ader)** ግን ለ**ጥሩ ልብ**፣ ለጥሩ ስሜት፣ ለጥሩ ግንዛቤ እና ለጥሩ የሰውነት አጠቃቀም (Mental/Emotional well-being) ይጠቅ",
+      "response_am_translated_en": "In short:\n\n*   The word **Aqub** helps with **a good body**, good strength, and good use of life (physical fitness).\n*   **Ader**, however, helps with **a good heart**, good feelings, good understanding, and good use of the body (mental/emotional well-being)."
+    },
+    {
+      "id": "meskel_damera",
+      "topic": "Meskel & Damera",
+      "gold_fact": "Meskel (Meskerem 17 / Sept 27) commemorates the finding of the True Cross; people light a large bonfire called Damera.",
+      "en": "What is the Damera in the Ethiopian festival of Meskel? Answer briefly.",
+      "am": "በኢትዮጵያ የመስቀል በዓል ላይ 'ደመራ' ምንድን ነው? በአጭሩ መልስ።",
+      "response_en": "In the Ethiopian festival of Meskel, the **Damera** is a large, ornate cross made of wood, often decorated with flowers, ribbons, and sometimes a small bell. It is carried by a group of people (the *Dameraw*) who dance and sing while searching for the True Cross, which is believed to be hidden in the grass or bushes. The Damera serves as a symbolic representation of the Holy Cross and guides the search.",
+      "response_am": "በኢትዮጵያ የመስቀል በዓል ላይ **\"ደመራ\"** የሚባለው የሰው ልጅ ሰውነት ላይ የሚደረግ የጥገና እና የመጠበቅ ሂደት ነው።\n\nይህ ሂደት በተለይ በሰውነት ላይ የሚገኙ የጥገና ስራዎችን (ለምሳሌ፡ የደም ማጠራቀሚያ፣ የጭንቅላት ማጠራቀሚያ፣ የአፍ ማጠራቀሚ",
+      "response_am_translated_en": "On the Ethiopian Cross Day, \"Demera\" refers to a human body repair and preservation process. This process is especially for repair works on the body (for example: blood vessel, brain vessel, mouth vessel"
+    }
+  ],
+  "welsh_culture": [
+    {
+      "id": "santes_dwynwen",
+      "topic": "Dydd Santes Dwynwen",
+      "gold_fact": "25 January — Welsh equivalent of Valentine's Day, celebrating the Welsh patron saint of lovers.",
+      "en": "When is Dydd Santes Dwynwen celebrated and what does it mark? Answer briefly.",
+      "cy": "Pryd mae Dydd Santes Dwynwen yn cael ei ddathlu a beth mae'n ei nodi? Atebwch yn fyr.",
+      "response_en": "Dydd Santes Dwynwen is celebrated on **January 25th**. It marks the feast day of Saint Dwynwen, the patron saint of lovers in Wales, commemorating her legendary devotion and the founding of the first Welsh love festival.",
+      "response_cy": "Mae Dydd Santes Dwynwen yn cael ei ddathlu ar **yn ystod mis Chwefror** (yn aml 25 Chwefror) fel dydd gŵyl Cymreig.\n\nMae'n nodi **Santes Dwynwen**, y sant padronol Cymru, ac mae'n symbol o **cariad, cydymdeimlad, a chymdeithas**.",
+      "response_cy_translated_en": "Dydd Santes Dwynwen is celebrated **in the month of February** (often on 25 February) as a Welsh feast day.\n\nIt commemorates **Saint Dwynwen**, the patron saint of Wales, and is a symbol of **love, compassion, and community**."
+    },
+    {
+      "id": "mari_lwyd",
+      "topic": "Mari Lwyd",
+      "gold_fact": "A Welsh midwinter/New Year folk custom involving a decorated horse's skull carried door-to-door with rhyming song battles (pwnco).",
+      "en": "What is the Mari Lwyd tradition in Wales? Answer briefly.",
+      "cy": "Beth yw traddodiad y Fari Lwyd yng Nghymru? Atebwch yn fyr.",
+      "response_en": "The **Mari Lwyd** is a traditional Welsh Christmas and New Year custom involving a \"Grey Mare\" (a horse's skull mounted on a pole with ribbons and a banner). A group of people, often wearing masks and carrying the skull on a pole, visits neighboring houses to demand entry for singing and caroling.\n\nThe host must then defend their door by pulling a rope attached to the skull while the visitors try to pull it off. If the visitors succeed, they are welcomed inside to sing and share food and drink; if they fail, they must leave. This ritual, which has roots in ancient pagan traditions, is now a rare and celebrated cultural event, primarily found in South Wales.",
+      "response_cy": "Mae traddodiad y Fari Lwyd yn gysylltiedig â'r Gŵyl Dewi Sant (St David's Day) ar 1 Mawrth. Mae'r fari, sy'n deillio o'r enw \"Mary Magdalene\", yn cael ei phortreadu fel ferch ifanc gyda chroen lwyd, gwallt coch, a gwisg fferm.\n\nYn ystod y gŵyl, mae pobl yn gwisgo gwisg fferm a chynnal y fari lwyd ar eu pen. Mae'r traddodiad hwn yn nodi'r dyddiad pan gymerodd y Brenin David o Gymru ei enw newydd o \"David\" yn hytrach na \"Huw\" (Huw yn Gymraeg), ac mae'n gysylltiedig â'r st",
+      "response_cy_translated_en": "The tradition of the Grey Mare is associated with St David's Day on March 1st. The mare, which derives its name from \"Mary Magdalene\", is depicted as a young girl with grey skin, red hair, and farm clothing. During the festival, people wear farm clothing and carry the grey mare on their heads. This tradition marks the date when King David of Wales took his new name from \"David\" instead of \"Huw\" (Huw in Welsh), and it is associated with the st"
+    },
+    {
+      "id": "calennig",
+      "topic": "Calennig",
+      "gold_fact": "A Welsh New Year's Day custom where children go door-to-door singing for small gifts/money, traditionally carrying a decorated apple on three sticks.",
+      "en": "What is the Welsh tradition of Calennig? Answer briefly.",
+      "cy": "Beth yw'r traddodiad Cymreig o Galennig? Atebwch yn fyr.",
+      "response_en": "**Calennig** is a traditional Welsh custom where children go door-to-door on **New Year's Day** (January 1st) to receive a small gift, known as a *calennig*.\n\nHistorically, these gifts were often symbolic items like a piece of bread, a coin, or a wooden spoon, representing good fortune and prosperity for the coming year. The tradition is rooted in ancient Celtic beliefs that the first day of the new year was a time when the veil between the worlds was thin, making it an auspicious moment to receive blessings. Today, it remains a cherished part of Welsh New Year celebrations, often accompanied by singing or reciting a poem.",
+      "response_cy": "Mae'r **Galennig** yn ddathliad Cymreig sy'n cael ei gynnal bob blwyddyn ar 11 Ionawr, sef dydd Gŵyl Calan Gaeaf.\n\nYn hytrach na chael ei dathlu fel diwrnod o ddiddordeb crefyddol, mae'n traddodiad **cynghrair lleol** lle mae'r bobl yn ymuno i:\n*   Cynnal gŵyl leol.\n*   Cynnal cystadlaethau (fel rhedeg, tynnu llwch, a chyngherddau).\n*   Cynnal digwyddiadau cymdeithasol a chymdeithasol.\n\nMae'r enw'n dod o'r gair Cymraeg *calan*, sy'n goly",
+      "response_cy_translated_en": "The **Galennig** is a Welsh celebration held annually on 11 January, which is the day of the Feast of the Winter Solstice.\n\nRather than being celebrated as a day of religious interest, it is a tradition of a **local guild** where people come together to:\n*   Hold a local festival.\n*   Hold competitions (such as running, tug-of-war, and concerts).\n*   Hold social and social events.\n\nThe name comes from the Welsh word *calan*, which means"
+    }
+  ]
+}

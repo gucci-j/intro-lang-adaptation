@@ -3,3 +3,5 @@ __pycache__/
 *.py[cod]
 .DS_Store
 .hf_token
+demo_safety.py
+safety_results.json

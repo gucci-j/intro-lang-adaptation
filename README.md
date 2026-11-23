@@ -63,6 +63,18 @@ Once `eval_results.json` is produced, generate the two-panel figure (`slide9_per
 python plot_results.py
 ```
 
+### Section 5 Demos: Cultural Defaults & Safety-Critical Localization
+
+Run the classroom demos for cultural defaults, Ethiopian/Welsh cultural knowledge, and safety-critical localization (no gated dataset required):
+
+```bash
+# Quick 6-prompt live demo (BLEnD fireworks prompts + emergency number in English & Amharic)
+python demo_live_culture_safety.py --model Qwen/Qwen3.5-9B --output live_demo_results.json
+
+# Broader cultural evaluation (US-default norms, Ethiopian culture in EN vs AM, Welsh culture in EN vs CY)
+python demo_culture.py --model Qwen/Qwen3.5-9B --output culture_results.json
+```
+
 ## Evaluation Details
 
 - **Belebele**: Zero-shot multiple-choice evaluation using next-token logits over the option letters (`A`, `B`, `C`, `D`) with Qwen3.5 thinking mode disabled (`enable_thinking=False`).
@@ -89,10 +101,21 @@ Evaluated on an NVIDIA A100 (`bfloat16`, `enable_thinking=False`). Full outputs 
 | Welsh (`cym_Latn`) | **51.11** / 25.47 | **71.43** / 51.07 | 56.2 (2.0×) | 140.8 |
 | Amharic (`amh_Ethi`) | **18.36** / 2.49 | **49.74** / 24.03 | 119.8 (4.3×) | 223.4 |
 
+### Section 5 Demos (`Qwen/Qwen3.5-9B`, Zero-Shot, Non-Thinking Mode)
+
+- **Live culture & safety-critical demo (`demo_live_culture_safety.py`, `live_demo_results.json`)**:
+  - *Fireworks (BLEnD)*: With no country given, leads with **July 4th (US)** and omits UK Bonfire Night; when explicitly asked about the **UK**, still picks **New Year's Eve (Dec 31)** over Bonfire Night (Nov 5); in **Amharic**, fails to recognize `ርችት` (*fireworks*) and transliterates it as *"Ritcht"*; in **English** specifying Ethiopia, recovers **New Year's Day (*Enkutatash*)** but assigns the Western date **January 1st** (instead of Sept 11 / Meskerem 1).
+  - *Emergency number (safety-critical default)*: In **English**, gives US 911, UK 999/112, and CPR/AED steps; in **Amharic**, misinterprets the breathing emergency as an emotional message and runs out of its 220-token budget before giving any emergency number (missing Ethiopia's **907** ambulance number).
+- **Broader cultural evaluation (`demo_culture.py`, `culture_results.json`)**:
+  - *US-default norms*: Answered *"second Sunday of May in the United States"* for Mother's Day, *"January 1st"* for the tax year, *"American English ... waist to the ankles"* for *pants*, and *"911"* first for emergency numbers.
+  - *Fluent language ≠ cultural knowledge*: Correctly answered Ethiopian calendar (*13 months, Pagumen*), Buna rounds (*Abol, Tona, Baraka*), *Iddir* vs *Equb*, *Dydd Santes Dwynwen* (25 Jan), *Mari Lwyd*, and *Calennig* when asked in **English**, yet hallucinated basic facts when asked the exact same questions in **Amharic** or **Welsh**.
+
 ## Files
 
 - `eval_belebele_flores.py` — Main evaluation script for Belebele and FLORES+.
 - `plot_results.py` — Plots the two-panel summary chart from `eval_results.json`.
+- `demo_live_culture_safety.py` — Live 6-prompt demo (BLEnD fireworks + English/Amharic emergency number).
+- `demo_culture.py` — US-default norms & Ethiopian/Welsh cultural knowledge demo.
 - `install.sh` — One-step environment setup script.
 - `requirements.txt` — Python dependencies.
 
